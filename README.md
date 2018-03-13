@@ -136,21 +136,15 @@ of your choosing, ranging from windows, to mac, to linux, to android
 to iOS.  You simply point your favorite browser on your favorite
 device to the local web server link.
 
-#### maps
+- **maps:** A traditional top down map is provided that shows the
+  aircraft path.  This tool can also be used for route planning.
 
-A traditional top down map is provided that shows the aircraft path.
-This tool can also be used for route planning.
+- **panel:** A simple aircraft panel is also provided.  This is
+  modeled after a modern C172-S instrument panel with working gauges.
 
-#### panel
-
-A simple aircraft panel is also provided.  This is modeled after a
-modern C172-S instrument panel with working gauges.
-
-#### props
-
-An engineering/debugging page is provided for inspecting all the
-internal values available at the ground station.  This is live updated
-as the data is received from the aircraft.
+- **props:** An engineering/debugging page is provided for inspecting
+  all the internal values available at the ground station.  This is
+  live updated as the data is received from the aircraft.
 
 ## Mission Manager
 
