@@ -28,7 +28,7 @@ process.  Here are some of mine:
 
 - Robustness - the system and the code can never fail.
 
-- Simplicity - like weight when buiding an airplane, simplicity must
+- Simplicity - like weight when building an airplane, simplicity must
   be a focus from the very beginning.
   - Limits the number of CPU boards it supports.
   - Limits the number of sensors and external devices it supports.
@@ -60,25 +60,18 @@ investment in Python on-board inside the critical main loop.
   linux-based systems such as raspberry pi, beaglebone, gumstix,
   edison, etc. python is available, fast, and robust.
   
-- A task written in python is often 30-40% the number of lines of code
-  compared to the equivalent task written in C++.
-  
-- A function that crashes in python returns control to the calling
-  layer and the program continues.  A function that crashes in C++
-  aborts the entire system.
-
 - Question: if the python code is robust and runs for days and days
   without errors, and if the memory footprint is stable and never
   increases during the program lifetime, and if the performance meets
   the 100hz goal, and if the code is far simpler, shorter, more
   readable, easier to write, easier to validate ... then why not use
-  python in strategic areas where it's strength greatly benefit the
+  python in strategic areas where it's strengths greatly benefit the
   overall system?
 
 ## EKF
 
 The AuraUAS EKF is a 15-state filter developed at the University of
-Minnesota Aerospace engineering department.  The orignal algorithm was
+Minnesota Aerospace engineering department.  The original algorithm was
 developed by Professor Demoz Gebre in matlab, then ported to C for
 real time use.  The current version has been wrapped in a simple C++
 class. The internal matrix/vector libraries have been replaced with
@@ -90,10 +83,10 @@ The inputs required are:
 - 3 axis gyro (p, q, r)
 - 3 axis accelerometer (ax, ay, az)
 - GPS position (lat, lon, alt)
-- GPS veloctiy (vn, ve, vd)
+- GPS velocity (vn, ve, vd)
 
 There is a variant of the EKF (included) that uses the 3 axis
-magnetometer in the measurment update portion of the alogirithm to
+magnetometer in the measurement update portion of the algorithm to
 help track orientation in low dynamic portions of the flight.  The
 accuracy of the results are highly dependent on the quality of the
 magnetometer calibration and the amount of magnetic
@@ -127,10 +120,10 @@ other systems.  It is composed of two pieces:
 
 ### auralink.py
 
-This is a python appliation that connects directly to the aircraft via
+This is a python application that connects directly to the aircraft via
 a radio modem.  It is responsible for:
 
-- receiveing and decoding aircraft telemetery messages.
+- receiving and decoding aircraft telemetry messages.
 - sending operator commands to the aircraft.
 - logging the received data.
 - hosting the ground station interactive web applications.
